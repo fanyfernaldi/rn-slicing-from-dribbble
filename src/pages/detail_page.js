@@ -162,7 +162,7 @@ const styles = StyleSheet.create({
         labelAndSliderWrapper: {
           marginTop: 30,
           alignItems: 'center',
-          backgroundColor: 'red',
+          // backgroundColor: 'red',
           flex: 1,
         },
         label: {
@@ -175,7 +175,7 @@ const styles = StyleSheet.create({
           flex: 1,
           width: 350,
           justifyContent: 'center',
-          backgroundColor: 'blue',
+          // backgroundColor: 'blue',
         },
       },
     },
