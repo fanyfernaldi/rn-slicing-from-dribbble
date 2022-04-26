@@ -64,8 +64,8 @@ const styles = StyleSheet.create({
           fontWeight: '700',
         },
         switch: {
-          flex: 1,
           alignSelf: 'flex-end',
+          flex: 1,
           marginRight: 17,
         },
       },
@@ -149,18 +149,21 @@ const styles = StyleSheet.create({
       },
       imageAndSlider: {
         container: {
+          // flex: 1,
           flexDirection: 'row',
-          justifyContent: 'space-between',
+          // justifyContent: 'space-between',
         },
         image: {
           marginTop: 30,
           width: 170,
           height: 450,
+          flex: 1,
         },
         labelAndSliderWrapper: {
           marginTop: 30,
-          position: 'absolute',
-          right: -140,
+          alignItems: 'center',
+          backgroundColor: 'red',
+          flex: 1,
         },
         label: {
           fontSize: 12,
@@ -169,8 +172,10 @@ const styles = StyleSheet.create({
           textAlign: 'center',
         },
         slider: {
-          marginTop: 200,
-          width: 380, // mengatur panjang slider
+          flex: 1,
+          width: 350,
+          justifyContent: 'center',
+          backgroundColor: 'blue',
         },
       },
     },
@@ -353,15 +358,13 @@ const DetailPage = ({navigation}) => {
               <Text style={styles.body.content.imageAndSlider.label}>
                 Level
               </Text>
-              <View style={styles.body.content.imageAndSlider.slider}>
-                <Slider
-                  thumbTintColor="#fecf4c"
-                  minimumTrackTintColor="#fecf4c"
-                  maximumTrackTintColor="#efefef"
-                  vertical={true}
-                  // containerStyle={styles.body.content.imageAndSlider.slider}
-                />
-              </View>
+              <Slider
+                thumbTintColor="#fecf4c"
+                minimumTrackTintColor="#fecf4c"
+                maximumTrackTintColor="#efefef"
+                vertical
+                containerStyle={styles.body.content.imageAndSlider.slider}
+              />
             </View>
           </View>
         </View>
